@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 6
+names: ['EXCESS SOLDER', 'GOOD', 'INSUFFICIENT SOLDER', 'PCB_DEFECT-cWCt', 'SOLDER BALLING', 'SOLDER BRIDGE']
+
+roboflow:
+  workspace: msrs-workspace-8e9e1
+  project: msrs-workspace-8e9e1
+  version: dataset
+  license: Private
+  url: https://app.roboflow.com/msrs-workspace-8e9e1/msrs-workspace-8e9e1/dataset

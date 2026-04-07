@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Datasets
+scratch/
+solder/
+unified_dataset/
+
+# Ultralytics runs
+runs/
+
+# Large models - except the one we need
+*.pt
+!best.pt
+
+# OS files
+.DS_Store
+Thumbs.db
