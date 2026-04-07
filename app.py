@@ -1,3 +1,10 @@
+import os
+import sys
+# [HACK] Streamlit Cloud's apt-get is completely broken for Debian right now so we cannot install libGL.
+# We must forcefully uninstall standard opencv-python and ensure headless is used instead before importing cv2.
+if sys.platform.startswith("linux"):
+    os.system("pip uninstall -y opencv-python")
+
 import streamlit as st
 import cv2
 import numpy as np
