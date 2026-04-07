@@ -1,3 +1,14 @@
+import sys
+import subprocess
+
+# Safely force the headless version of OpenCV to bypass Streamlit's linux environment bugs
+if sys.platform.startswith("linux"):
+    try:
+        subprocess.check_call([sys.executable, "-m", "pip", "uninstall", "-y", "opencv-python", "opencv-python-headless"])
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "opencv-python-headless"])
+    except Exception:
+        pass
+
 import streamlit as st
 import cv2
 import numpy as np
